@@ -1,6 +1,18 @@
 'use strict';
 require('dotenv').config();
 const express     = require('express');
+const helmet = require('helmet');
+
+app.use(helmet({
+  contentSecurityPolicy: {
+    directives: {
+      defaultSrc: ["'self'"],
+      styleSrc: ["'self'"],
+    }
+  },
+  noCache: true
+}));
+
 const bodyParser  = require('body-parser');
 const cors        = require('cors');
 
