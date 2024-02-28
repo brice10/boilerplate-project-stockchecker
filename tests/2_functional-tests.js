@@ -91,7 +91,7 @@ suite('Functional Tests', function () {
                 assert.equal(res.status, 200);
 
                 assert.isOk(res.body);
-                const ticker = res.body;
+                const ticker = res.body.stockData;
                 assert.isArray(ticker);
                 assert.equal(ticker.length, 2);
                 assert.property(ticker[0], 'stock');
@@ -114,7 +114,7 @@ suite('Functional Tests', function () {
                 assert.equal(res.status, 200);
 
                 assert.isOk(res.body);
-                const ticker = res.body;
+                const ticker = res.body.stockData;
                 assert.isArray(ticker);
                 assert.equal(ticker.length, 2);
                 assert.property(ticker[0], 'stock');

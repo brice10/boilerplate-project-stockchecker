@@ -21,7 +21,7 @@ module.exports = function (app) {
         };
       }));
 
-      return res.json(stockData);
+      return res.json({ stockData: stockData });
     }
     
     const { symbol, latestPrice } = await StockApi.getStock(stock);
