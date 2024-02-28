@@ -9,6 +9,7 @@ services:
         - PORT=${PORT}
         - NODE_ENV=${NODE_ENV}
         - MONGO_URI=${MONGO_URI}
+        - STOCK_API_URL=${STOCK_API_URL}
     ports:
       - ${PORT}:${PORT}
     restart: unless-stopped
